@@ -1,8 +1,9 @@
+/*jshint esversion: 6 */
+
 (function() {
-    // JS practice.
     // Reference：https://codepen.io/supah/pen/jqOBqp
-    // It's Cool ! ↑
-    var fakeMsg, fakeNum, isTyping, messages, uctTimer;
+
+    let fakeMsg, fakeNum, isTyping, messages, uctTimer;
 
     messages = $(".messages-content");
 
@@ -20,7 +21,7 @@
     };
 
     window.setDate = function() {
-        var d, timestamp;
+        let d, timestamp;
         timestamp = $("<div>").addClass("timestamp");
         d = new Date();
         timestamp.text(d.getHours() + ":" + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes());
@@ -37,12 +38,12 @@
     fakeMsg = ["Hi there, I\'m Sophia, currently doing my MA in Digital Humanities at UCL. How about you?", "Nice to meet you", "How are you doing?", "Pretty good", "How\'s life been treating you?", "It could be worse, thanks", "I\'ve gotta go now", "It was a pleasure chat with you", "Bye! :)"];
 
     window.setFakeMessage = function() {
-        var typing;
+        let typing;
         typing = $("<div>").append("<span>").addClass("message typing");
         typing.appendTo($('.mCSB_container'));
         updateScrollbar();
         return setTimeout(function() {
-            var msg;
+            let msg;
             typing.remove();
             msg = $("<div>").addClass("message");
             msg.text(fakeMsg[fakeNum]);
@@ -54,7 +55,7 @@
     };
 
     window.insertMessage = function() {
-        var msg, msgText;
+        let msg, msgText;
         msgText = $(".action-box-input").val();
         if ($.trim(msgText) === "") {
             return false;
@@ -91,7 +92,7 @@
     });
 
     $(".action-box-input").on("keydown", function(e) {
-        var typing;
+        let typing;
         if ($(".action-box-input") !== "" && isTyping === true && e.which !== 13) {
             typing = $("<div>").append("<span>").addClass("message personal typing");
             typing.appendTo($('.mCSB_container'));
