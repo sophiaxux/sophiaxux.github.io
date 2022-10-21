@@ -34,7 +34,7 @@
         });
     };
 
-    fakeMsg = ["Hi there, I\'m Sophia and you?", "Nice to meet you", "How are you doing?", "Pretty good", "How\'s life been treating you?", "It could be worse, thanks", "I\'ve gotta go now", "It was a pleasure chat with you", "Bye :)"];
+    fakeMsg = ["Hi there, I\'m Sophia and you?", "Nice to meet you", "How are you doing?", "Pretty good", "How\'s life been treating you?", "It could be worse, thanks", "I\'ve gotta go now", "It was a pleasure chat with you", "Bye! :)"];
 
     window.setFakeMessage = function() {
         var typing;
